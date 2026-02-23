@@ -1,0 +1,5 @@
+{
+  "name": "VELOCE - Performance Footwear",
+  "description": "Premium athletic footwear platform featuring AI-powered style assistance, image generation, and performance analytics.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"]
+}

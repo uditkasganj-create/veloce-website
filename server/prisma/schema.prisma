@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./client"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model PageView {
+  id        Int      @id @default(autoincrement())
+  path      String
+  ip        String?
+  timestamp DateTime @default(now())
+}
+
+model ActiveUser {
+  id        Int      @id @default(autoincrement())
+  ip        String   @unique
+  lastPing  DateTime @default(now())
+}
+
+model ClickEvent {
+  id        Int      @id @default(autoincrement())
+  elementId String
+  ip        String?
+  timestamp DateTime @default(now())
+}
+
+model ContactSubmission {
+  id        Int      @id @default(autoincrement())
+  name      String?
+  email     String?
+  phone     String?
+  message   String?
+  type      String   // e.g. "support", "shipping", "privacy"
+  timestamp DateTime @default(now())
+}
