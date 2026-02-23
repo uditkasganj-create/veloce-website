@@ -1,20 +1,32 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Veloce Performance Footwear
 
-# Run and deploy your AI Studio app
+Welcome to the **Veloce** sneaker website repository. Veloce represents the pinnacle of performance and style in modern footwear.
 
-This contains everything you need to run your app locally.
+## Live Website
 
-View your app in AI Studio: https://ai.studio/apps/15373d1a-e9e2-453f-a0c1-bba6fe1cfdf6
+🚀 **[View the Live Website Here](https://veloce-websiteveloce-website.onrender.com/)**
 
-## Run Locally
+## About
 
-**Prerequisites:**  Node.js
+This project is a React-based web application showcasing the Veloce brand. It features:
+- A modern, high-performance user interface
+- A catalog of premium performance footwear
+- A sleek, responsive design engineered for optimal user experience
 
+## Local Development
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+To run this project locally:
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Deployment
+
+This application is officially deployed on Render.com using the included `render.yaml` specification.
