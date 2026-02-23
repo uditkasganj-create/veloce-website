@@ -10,7 +10,3 @@ services:
         value: production
       - key: PORT
         value: 3000
-    disk:
-      name: veloce-db
-      mountPath: /opt/render/project/src/server/db
-      sizeGB: 1
