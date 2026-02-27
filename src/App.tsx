@@ -1630,7 +1630,7 @@ export default function App() {
 
     const fetchStats = async () => {
       try {
-        const API_BASE = (window as any).__VITE_API_URL__ ?? 'http://localhost:5000/api';
+        const API_BASE = (import.meta as any).env?.VITE_API_URL ?? '/api';
         const res = await fetch(`${API_BASE}/analytics/stats`);
         if (!res.ok) return;
         const data = await res.json();
