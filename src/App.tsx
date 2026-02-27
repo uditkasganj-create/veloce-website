@@ -1628,18 +1628,21 @@ export default function App() {
   useEffect(() => {
     if (page !== 'analytics') return;
 
+    // HTTP fallback for initial load & recent submissions
     const fetchStats = async () => {
       try {
         const API_BASE = (import.meta as any).env?.VITE_API_URL ?? '/api';
         const res = await fetch(`${API_BASE}/analytics/stats`, { cache: 'no-store' });
         if (!res.ok) return;
         const data = await res.json();
-        setStats({
-          activeVisitors: data.activeUsers || 0,
-          totalEngagement: data.totalEngagements || 0,
-          pageViews: data.totalViews || 0,
-          recentSubmissions: data.recentSubmissions || []
-        });
+        setStats(prev => ({
+          ...prev, // Keep WS stats if already loaded
+          recentSubmissions: data.recentSubmissions || [],
+          // Only use HTTP stats if WS hasn't updated them yet
+          activeVisitors: prev.activeVisitors || data.activeUsers || 0,
+          totalEngagement: prev.totalEngagement || data.totalEngagements || 0,
+          pageViews: prev.pageViews || data.totalViews || 0,
+        }));
       } catch (err) {
         console.error('Failed to fetch analytics stats:', err);
       }
@@ -1649,6 +1652,44 @@ export default function App() {
     const interval = setInterval(fetchStats, 5000);
     return () => clearInterval(interval);
   }, [page]);
+
+  // Global WebSocket Connection
+  useEffect(() => {
+    const WS_URL = (import.meta as any).env?.VITE_WS_URL ?? (
+      window.location.protocol === 'https:' ? `wss://${window.location.host}` : 'ws://localhost:5000'
+    );
+
+    const connectWS = () => {
+      const ws = new WebSocket(WS_URL);
+      socketRef.current = ws;
+
+      ws.onmessage = (event) => {
+        try {
+          const data = JSON.parse(event.data);
+          if (data.type === 'stats_update') {
+            setStats(prev => ({
+              ...prev,
+              activeVisitors: data.activeVisitors,
+              totalEngagement: data.totalEngagement,
+              pageViews: data.pageViews
+            }));
+          }
+        } catch (e) {
+          console.error("WS parse error", e);
+        }
+      };
+
+      ws.onclose = () => {
+        setTimeout(connectWS, 3000); // Reconnect
+      };
+    };
+
+    connectWS();
+
+    return () => {
+      if (socketRef.current) socketRef.current.close();
+    };
+  }, []);
 
   useEffect(() => {
     document.body.classList.toggle('dark', isDark);
