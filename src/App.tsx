@@ -1631,7 +1631,7 @@ export default function App() {
     const fetchStats = async () => {
       try {
         const API_BASE = (import.meta as any).env?.VITE_API_URL ?? '/api';
-        const res = await fetch(`${API_BASE}/analytics/stats`);
+        const res = await fetch(`${API_BASE}/analytics/stats`, { cache: 'no-store' });
         if (!res.ok) return;
         const data = await res.json();
         setStats({
