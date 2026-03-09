@@ -20,12 +20,13 @@ export interface FilterState {
 }
 
 const PRICE_RANGE = [
-  { label: 'Under ₹2,000', min: 0, max: 2000 },
-  { label: '₹2,000 - ₹4,000', min: 2000, max: 4000 },
-  { label: '₹4,000 - ₹6,000', min: 4000, max: 6000 },
-  { label: '₹6,000 - ₹8,000', min: 6000, max: 8000 },
-  { label: 'Above ₹8,000', min: 8000, max: 100000 },
+  { label: 'Under Rs. 2,000', min: 0, max: 2000 },
+  { label: 'Rs. 2,000 - Rs. 4,000', min: 2000, max: 4000 },
+  { label: 'Rs. 4,000 - Rs. 6,000', min: 4000, max: 6000 },
+  { label: 'Rs. 6,000 - Rs. 8,000', min: 6000, max: 8000 },
+  { label: 'Above Rs. 8,000', min: 8000, max: 100000 },
 ];
+
 
 const SORT_OPTIONS = [
   { value: 'createdAt', label: 'Newest' },
@@ -34,6 +35,7 @@ const SORT_OPTIONS = [
   { value: 'rating', label: 'Highest Rated' },
   { value: 'name', label: 'Name: A-Z' },
 ];
+
 
 export function SearchFilters({
   onSearch,
