@@ -3,8 +3,9 @@ services:
     name: veloce-website
     env: node
     plan: free # Can be upgraded for more performance
-    buildCommand: npm install && npm run build
-    startCommand: node_modules/.bin/tsx server/src/index.ts
+    buildCommand: npm install && npx prisma generate && npm run build
+    startCommand: npx tsx server/src/index.ts
+
     envVars:
       - key: NODE_ENV
         value: production
