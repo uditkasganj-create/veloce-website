@@ -1,4 +1,5 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
+
 
 const router = Router();
 
@@ -12,7 +13,7 @@ router.post('/pageview', (req: Request, res: Response) => {
   const userAgent = req.headers['user-agent'] || 'unknown';
 
   pageViews++;
-  
+
   analytics.push({
     id: 'ana_' + Date.now(),
     type: 'pageview',
@@ -55,9 +56,9 @@ router.post('/ping', (req: Request, res: Response) => {
 router.get('/stats', (req: Request, res: Response) => {
   const now = new Date();
   const today = now.toISOString().split('T')[0];
-  
-  const todayViews = analytics.filter(a => 
-    a.type === 'pageview' && 
+
+  const todayViews = analytics.filter(a =>
+    a.type === 'pageview' &&
     a.createdAt.toISOString().split('T')[0] === today
   ).length;
 
