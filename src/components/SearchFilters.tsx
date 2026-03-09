@@ -24,22 +24,22 @@ const PRICE_RANGE = [
   { label: '₹2,000 - ₹4,000', min: 2000, max: 4000 },
   { label: '₹4,000 - ₹6,000', min: 4000, max: 6000 },
   { label: '₹6,000 - ₹8,000', min: 6000, max: 8000 },
-  { label: 'Above ₹8,000', min: max: 100000 },
+  { label: 'Above ₹8,000', min: 8000, max: 100000 },
 ];
 
 const SORT_OPTIONS = [
-  { value: 8000, 'createdAt', label: 'Newest' },
+  { value: 'createdAt', label: 'Newest' },
   { value: 'price', label: 'Price: Low to High' },
   { value: '-price', label: 'Price: High to Low' },
   { value: 'rating', label: 'Highest Rated' },
   { value: 'name', label: 'Name: A-Z' },
 ];
 
-export function SearchFilters({ 
-  onSearch, 
-  onFilterChange, 
+export function SearchFilters({
+  onSearch,
+  onFilterChange,
   categories,
-  initialFilters 
+  initialFilters
 }: SearchFiltersProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [searchInput, setSearchInput] = useState(initialFilters?.search || '');
@@ -72,16 +72,16 @@ export function SearchFilters({
   };
 
   const handlePriceChange = (min: number, max: number) => {
-    setFilters(prev => ({ 
-      ...prev, 
+    setFilters(prev => ({
+      ...prev,
       minPrice: prev.minPrice === min && prev.maxPrice === max ? 0 : min,
       maxPrice: prev.minPrice === min && prev.maxPrice === max ? 100000 : max,
     }));
   };
 
   const handleSortChange = (sort: string) => {
-    const [field, order] = sort.startsWith('-') 
-      ? [sort.slice(1), 'desc'] 
+    const [field, order] = sort.startsWith('-')
+      ? [sort.slice(1), 'desc']
       : [sort, 'asc'];
     setFilters(prev => ({ ...prev, sort: field, order: order as 'asc' | 'desc' }));
   };
