@@ -4,7 +4,7 @@ services:
     env: node
     plan: free # Can be upgraded for more performance
     buildCommand: npm install && npm run build
-    startCommand: npm start
+    startCommand: node_modules/.bin/tsx server/src/index.ts
     envVars:
       - key: NODE_ENV
         value: production
