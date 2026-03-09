@@ -1145,12 +1145,21 @@ const Footer = ({ setPage }: { setPage: (p: Page) => void }) => {
           </ul>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] font-mono opacity-30 uppercase tracking-widest text-center md:text-left">
-        <p>© 2026 VELOCE FOOTWEAR. ALL RIGHTS RESERVED.</p>
-        <div className="flex gap-8">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/UPI-Logo.png" className="h-4 grayscale brightness-200" referrerPolicy="no-referrer" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" className="h-4 grayscale brightness-200" referrerPolicy="no-referrer" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" className="h-4 grayscale brightness-200" referrerPolicy="no-referrer" />
+      <div className="max-w-7xl mx-auto pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[11px] font-mono uppercase tracking-widest text-center md:text-left">
+        <p className="opacity-50 hover:opacity-100 transition-opacity">© 2026 VELOCE FOOTWEAR. ALL RIGHTS RESERVED.</p>
+        <div className="flex gap-6 items-center flex-wrap justify-center">
+          <div className="flex items-center gap-2 opacity-60 hover:opacity-100 hover:text-brand-orange transition-all cursor-default">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></svg>
+            <span>Visa / Mastercard</span>
+          </div>
+          <div className="flex items-center gap-2 opacity-60 hover:opacity-100 hover:text-emerald-400 transition-all cursor-default">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></svg>
+            <span>Apple Pay</span>
+          </div>
+          <div className="flex items-center gap-2 opacity-60 hover:opacity-100 hover:text-blue-400 transition-all cursor-default">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+            <span>Crypto</span>
+          </div>
         </div>
       </div>
 

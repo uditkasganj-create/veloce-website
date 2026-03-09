@@ -166,6 +166,31 @@ if (NODE_ENV === 'production') {
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../../dist/index.html'));
   });
+} else {
+  app.get('/', (req, res) => {
+    res.send(`
+      <html>
+        <head>
+          <title>Veloce API Server</title>
+          <style>
+            body { font-family: system-ui, sans-serif; padding: 2rem; backgroud: #111; color: #fff; }
+            h1 { color: #d4af37; }
+            a { color: #d4af37; }
+          </style>
+        </head>
+        <body style="background: #111; color: #fff;">
+          <h1>🏃 Veloce API Server Running</h1>
+          <p>The backend is running successfully!</p>
+          <p>The frontend development server is running on <a href="http://localhost:5173">http://localhost:5173</a></p>
+          <p>Available endpoints:</p>
+          <ul>
+            <li><a href="/api/health">/api/health</a> - Health Check</li>
+            <li><a href="/api/kpis">/api/kpis</a> - Live KPIs</li>
+          </ul>
+        </body>
+      </html>
+    `);
+  });
 }
 
 server.listen(PORT, () => {
