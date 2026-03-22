@@ -166,7 +166,7 @@ const Hero = ({ setPage }: { setPage: (p: Page) => void }) => {
             muted
             loop
             playsInline
-            poster="https://images.unsplash.com/photo-1512990414788-d97cb4a25db3?q=80&w=2070&auto=format&fit=crop&fm=webp"
+            poster="https://picsum.photos/seed/veloce-hero/2070/1380"
             className="absolute inset-0 w-full h-full object-cover opacity-70"
           >
             <source src="/baner2.mp4" type="video/mp4" />
@@ -230,7 +230,7 @@ const BentoGrid = ({ setPage }: { setPage: (p: Page) => void }) => {
         {/* Main Featured Card */}
         <div className="md:col-span-2 md:row-span-2 bento-item bg-brand-charcoal group rounded-[40px] overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 shadow-2xl">
           <img
-            src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1200&fm=webp"
+            src="https://picsum.photos/seed/veloce-bento1/1200/800"
             className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000"
            
           />
@@ -246,7 +246,7 @@ const BentoGrid = ({ setPage }: { setPage: (p: Page) => void }) => {
         {/* Quiz Block */}
         <div className="md:col-span-2 bento-item bg-brand-charcoal flex items-center justify-center p-12 text-white group overflow-hidden rounded-[40px] border border-white/5 hover:border-white/20 transition-all duration-500 shadow-xl">
           <img
-            src="https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?q=80&w=1200&fm=webp"
+            src="https://picsum.photos/seed/veloce-bento2/1200/800"
             className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
            
           />

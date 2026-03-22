@@ -76,13 +76,16 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
+    // Serve public folder assets (images, videos)
+    app.use(express.static(path.join(__dirname, "public")));
+    // Serve built app
     app.use(express.static(path.join(__dirname, "dist")));
     app.get("*", (req, res) => {
       res.sendFile(path.join(__dirname, "dist", "index.html"));
     });
   }
 
-  const PORT = 3000;
+  const PORT = process.env.PORT || 3000;
   server.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on http://localhost:${PORT}`);
   });

@@ -34,7 +34,7 @@ export const PRODUCTS: Product[] = [
     name: 'URBAN NOMAD',
     price: 3999,
     category: 'Lifestyle',
-    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=800&auto=format&fit=crop&fm=webp',
+    image: 'https://picsum.photos/seed/veloce-urban/800/800',
     description: 'The ultimate city companion. Lightweight and stylish for the modern urban explorer.',
     emi: '₹1,333/mo for 3 months',
     specs: { weight: '210g', drop: '4mm', terrain: 'Urban', foam: 'Soft-Step' },
@@ -80,7 +80,7 @@ export const BLOG_POSTS = [
     id: 'b1',
     title: 'A Comprehensive Beginner’s Guide to Choosing the Perfect Jogging Shoe',
     excerpt: 'Understanding pronation, cushioning, and why your first pair matters more than you think.',
-    image: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=1200&fm=webp',
+    image: 'https://picsum.photos/seed/veloce-blog1/1200/800',
     content: `
 # A Comprehensive Beginner’s Guide to Choosing the Perfect Jogging Shoe
 
@@ -123,7 +123,7 @@ tight ten minutes into your run.
     id: 'b2',
     title: 'Fueling the Run: Advanced Nutrition and Recovery Strategies',
     excerpt: 'The science of carb timing, hydration, and the golden window of recovery.',
-    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&fm=webp',
+    image: 'https://picsum.photos/seed/veloce-blog2/1200/800',
     content: `
 # Fueling the Run: Advanced Nutrition and Recovery Strategies
 
