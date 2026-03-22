@@ -231,8 +231,8 @@ const BentoGrid = ({ setPage }: { setPage: (p: Page) => void }) => {
         <div className="md:col-span-2 md:row-span-2 bento-item bg-brand-charcoal group rounded-[40px] overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 shadow-2xl">
           <img
             src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1200&fm=webp"
-            className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
-            referrerPolicy="no-referrer"
+            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000"
+           
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent" />
           <div className="absolute inset-0 p-12 flex flex-col justify-end text-white z-10">
@@ -247,8 +247,8 @@ const BentoGrid = ({ setPage }: { setPage: (p: Page) => void }) => {
         <div className="md:col-span-2 bento-item bg-brand-charcoal flex items-center justify-center p-12 text-white group overflow-hidden rounded-[40px] border border-white/5 hover:border-white/20 transition-all duration-500 shadow-xl">
           <img
             src="https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?q=80&w=1200&fm=webp"
-            className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-1000"
-            referrerPolicy="no-referrer"
+            className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
+           
           />
           <div className="absolute inset-0 bg-brand-black/40 backdrop-blur-[2px] group-hover:backdrop-blur-none transition-all duration-700" />
           <div className="relative z-10 text-center max-w-md">
@@ -262,8 +262,8 @@ const BentoGrid = ({ setPage }: { setPage: (p: Page) => void }) => {
         <div className="md:col-span-1 bento-item bg-brand-charcoal group rounded-[40px] overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 shadow-lg">
           <img
             src="/aero.jpeg"
-            className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-110 transition-transform duration-1000"
-            referrerPolicy="no-referrer"
+            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-1000"
+           
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-black/30 to-brand-black/80" />
           <div className="relative z-10 h-full flex flex-col justify-between p-8 text-white">
@@ -282,8 +282,8 @@ const BentoGrid = ({ setPage }: { setPage: (p: Page) => void }) => {
         <div className="md:col-span-1 bento-item bg-brand-charcoal group rounded-[40px] overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 shadow-lg">
           <img
             src="/speed.jpeg"
-            className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-110 transition-transform duration-1000"
-            referrerPolicy="no-referrer"
+            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-1000"
+           
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-black/30 to-brand-black/80" />
           <div className="relative z-10 h-full flex flex-col justify-between p-8 text-white">
@@ -322,7 +322,7 @@ const ProductCarousel = ({ onSelect, setPage }: { onSelect: (p: Product) => void
             className="cursor-pointer group bg-white dark:bg-white/5 rounded-[32px] p-4 border border-black/5 dark:border-white/5 hover:border-brand-orange/30 hover:shadow-2xl transition-all duration-500"
           >
             <div className="aspect-square bg-black/5 dark:bg-white/5 rounded-3xl overflow-hidden mb-6 relative">
-              <img src={product.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
+              <img src={product.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute top-6 left-6 flex flex-col gap-2">
                 <span className="bg-white/90 dark:bg-black/80 backdrop-blur-md px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-sm">{product.category}</span>
                 <div className="flex items-center gap-1 bg-brand-orange text-white px-3 py-1.5 rounded-full text-[10px] font-bold shadow-sm">
@@ -363,7 +363,7 @@ const ProductCarousel = ({ onSelect, setPage }: { onSelect: (p: Product) => void
             className="min-w-[420px] snap-center cursor-pointer group bg-white dark:bg-white/5 rounded-[32px] p-4 border border-black/5 dark:border-white/5 hover:border-brand-orange/30 hover:shadow-2xl transition-all duration-500"
           >
             <div className="aspect-square bg-black/5 dark:bg-white/5 rounded-3xl overflow-hidden mb-6 relative">
-              <img src={product.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
+              <img src={product.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute top-6 left-6 flex flex-col gap-2">
                 <span className="bg-white/90 dark:bg-black/80 backdrop-blur-md px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-sm">{product.category}</span>
                 <div className="flex items-center gap-1 bg-brand-orange text-white px-3 py-1.5 rounded-full text-[10px] font-bold shadow-sm">
@@ -438,7 +438,7 @@ const TeamPage = () => {
           </div>
         </div>
         <div className="aspect-video bg-black/5 dark:bg-white/5 rounded-3xl overflow-hidden">
-          <img src="/jordan.jpeg" className="w-full h-full object-cover grayscale" referrerPolicy="no-referrer" />
+          <img src="/jordan.jpeg" className="w-full h-full object-cover grayscale" />
         </div>
       </div>
     </div>
@@ -473,7 +473,7 @@ const ZoomImage = ({ src, alt }: { src: string, alt: string }) => {
           y: showZoom ? `${50 - position.y}%` : "0%"
         }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        referrerPolicy="no-referrer"
+       
       />
       <div className="absolute top-6 right-6 p-2 bg-white/10 backdrop-blur-md rounded-full border border-white/10 text-white opacity-0 group-hover:opacity-100 transition-opacity">
         <Maximize2 size={16} />
@@ -529,7 +529,7 @@ const View360 = ({ productId }: { productId: string }) => {
       <img
         src={images[frame]}
         className="w-full h-full object-cover pointer-events-none"
-        referrerPolicy="no-referrer"
+       
       />
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-black/50 text-white px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest backdrop-blur-md flex items-center gap-3 border border-white/10">
         <RotateCw size={14} className="animate-spin-slow" />
@@ -592,7 +592,7 @@ const PDP = ({ product, onBack, onAddToCart }: { product: Product, onBack: () =>
                 onClick={() => setMainImage(product.image)}
                 className={cn("aspect-square bg-black/5 dark:bg-white/5 rounded-2xl overflow-hidden cursor-pointer hover:opacity-70 transition-opacity border-2", mainImage === product.image ? "border-brand-orange" : "border-transparent")}
               >
-                <img src={product.image} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src={product.image} className="w-full h-full object-cover" />
               </div>
               {[1, 2, 3].map(i => {
                 const imgUrl = `https://picsum.photos/seed/shoe${product.id}${i}/800/800`;
@@ -602,7 +602,7 @@ const PDP = ({ product, onBack, onAddToCart }: { product: Product, onBack: () =>
                     onClick={() => setMainImage(imgUrl)}
                     className={cn("aspect-square bg-black/5 dark:bg-white/5 rounded-2xl overflow-hidden cursor-pointer hover:opacity-70 transition-opacity border-2", mainImage === imgUrl ? "border-brand-orange" : "border-transparent")}
                   >
-                    <img src={imgUrl} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src={imgUrl} className="w-full h-full object-cover" />
                   </div>
                 );
               })}
@@ -963,7 +963,7 @@ const AILab = () => {
                 {msg.media && (
                   <div className="mt-4 rounded-2xl overflow-hidden">
                     {msg.media.startsWith('data:image') ? (
-                      <img src={msg.media} className="w-full h-auto" referrerPolicy="no-referrer" />
+                      <img src={msg.media} className="w-full h-auto" />
                     ) : (
                       <video src={msg.media} controls className="w-full h-auto" />
                     )}
@@ -1035,7 +1035,7 @@ const AILab = () => {
 
           {selectedImage && (
             <div className="mb-4 relative w-24 h-24 rounded-xl overflow-hidden border border-brand-orange">
-              <img src={selectedImage} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img src={selectedImage} className="w-full h-full object-cover" />
               <button onClick={() => setSelectedImage(null)} className="absolute top-1 right-1 bg-black/50 text-white rounded-full p-1"><X size={12} /></button>
             </div>
           )}
@@ -1146,7 +1146,7 @@ const BlogDetail = ({ post, onBack }: { post: any, onBack: () => void }) => {
         <div className="mb-12">
           <h1 className="text-5xl md:text-6xl font-serif italic mb-8 leading-tight">{post.title}</h1>
           <div className="aspect-video rounded-[40px] overflow-hidden mb-12 shadow-2xl">
-            <img src={post.image} alt={post.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+            <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
           </div>
         </div>
 
@@ -1267,9 +1267,9 @@ const Footer = ({ setPage }: { setPage: (p: Page) => void }) => {
       <div className="max-w-7xl mx-auto pt-12 border-t border-white/5 flex flex-col md:row justify-between items-center gap-8 text-[10px] font-mono opacity-30 uppercase tracking-widest">
         <p>© 2026 VELOCE FOOTWEAR. ALL RIGHTS RESERVED.</p>
         <div className="flex gap-8">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/UPI-Logo.png" className="h-4 grayscale brightness-200" referrerPolicy="no-referrer" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" className="h-4 grayscale brightness-200" referrerPolicy="no-referrer" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" className="h-4 grayscale brightness-200" referrerPolicy="no-referrer" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/UPI-Logo.png" className="h-4 grayscale brightness-200" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" className="h-4 grayscale brightness-200" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" className="h-4 grayscale brightness-200" />
         </div>
       </div>
     </footer>
@@ -1456,7 +1456,7 @@ const CheckoutPage = ({ cart, onBack, setPage, onRemove }: { cart: { product: Pr
             cart.map((item, i) => (
               <div key={i} className="glass-panel p-6 rounded-3xl flex gap-6 items-center">
                 <div className="w-24 h-24 rounded-2xl overflow-hidden bg-black/5 dark:bg-white/5">
-                  <img src={item.product.image} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src={item.product.image} className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-serif italic">{item.product.name}</h3>
@@ -1639,7 +1639,7 @@ export default function App() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {[1, 2, 3, 4].map(i => (
                     <div key={i} className="aspect-square rounded-2xl overflow-hidden relative group">
-                      <img src={`https://picsum.photos/seed/ugc${i}/600/600`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" referrerPolicy="no-referrer" />
+                      <img src={`https://picsum.photos/seed/ugc${i}/600/600`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                       <div className="absolute inset-0 bg-brand-orange/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <Instagram className="text-white" />
                       </div>
@@ -1677,7 +1677,7 @@ export default function App() {
                 {PRODUCTS.map(p => (
                   <div key={p.id} onClick={() => handleProductSelect(p)} className="cursor-pointer group">
                     <div className="aspect-[4/5] bg-black/5 dark:bg-white/5 rounded-[40px] overflow-hidden mb-6">
-                      <img src={p.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
+                      <img src={p.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     </div>
                     <div className="flex justify-between items-start">
                       <div>
@@ -1732,7 +1732,7 @@ export default function App() {
                 {BLOG_POSTS.map(post => (
                   <div key={post.id} onClick={() => handleBlogSelect(post)} className="group cursor-pointer flex flex-col">
                     <div className="aspect-[4/3] bg-black/5 dark:bg-white/5 rounded-[32px] overflow-hidden mb-6">
-                      <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
+                      <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     </div>
                     <h2 className="text-2xl font-serif italic mb-4 group-hover:text-brand-orange transition-colors leading-tight">{post.title}</h2>
                     <p className="opacity-60 text-sm mb-6 line-clamp-3">{post.excerpt}</p>
